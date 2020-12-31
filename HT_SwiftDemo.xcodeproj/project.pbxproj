@@ -52,6 +52,7 @@
 		DF746F63259C7D0800781978 /* piao.png in Resources */ = {isa = PBXBuildFile; fileRef = DF746F62259C7D0800781978 /* piao.png */; };
 		DF746F6C259C7D9C00781978 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF746F6B259C7D9C00781978 /* PushViewController.swift */; };
 		DF746F78259C7ED100781978 /* HT_PushAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF746F77259C7ED100781978 /* HT_PushAnimation.swift */; };
+		DF746F8C259DB7D100781978 /* HT_PushTransitionInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF746F8B259DB7D100781978 /* HT_PushTransitionInteractive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		DF746F62259C7D0800781978 /* piao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piao.png; sourceTree = "<group>"; };
 		DF746F6B259C7D9C00781978 /* PushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
 		DF746F77259C7ED100781978 /* HT_PushAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HT_PushAnimation.swift; sourceTree = "<group>"; };
+		DF746F8B259DB7D100781978 /* HT_PushTransitionInteractive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HT_PushTransitionInteractive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +302,7 @@
 			children = (
 				DF5F2B152595F6E400FD6E1C /* HT_PresentAnimation.swift */,
 				DF746F77259C7ED100781978 /* HT_PushAnimation.swift */,
+				DF746F8B259DB7D100781978 /* HT_PushTransitionInteractive.swift */,
 			);
 			path = Animaition;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				DF5F2AF32595EB0A00FD6E1C /* ViewController.swift in Sources */,
 				DF746F6C259C7D9C00781978 /* PushViewController.swift in Sources */,
 				DF5F2AEF2595EB0A00FD6E1C /* AppDelegate.swift in Sources */,
+				DF746F8C259DB7D100781978 /* HT_PushTransitionInteractive.swift in Sources */,
 				DF5F2AF12595EB0A00FD6E1C /* SceneDelegate.swift in Sources */,
 				DF5F2B162595F6E400FD6E1C /* HT_PresentAnimation.swift in Sources */,
 			);

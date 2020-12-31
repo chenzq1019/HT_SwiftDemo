@@ -245,12 +245,17 @@ extension HT_PresentAnimation {
 }
 
 
-extension HT_PresentAnimation:UIViewControllerTransitioningDelegate {
+extension HT_PresentAnimation : UIViewControllerTransitioningDelegate {
+    
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return self
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return self
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return nil
     }
 }
