@@ -34,7 +34,6 @@ class ViewController: UIViewController {
         let size = CGSize(width: 300, height: 200)
         //获取图文上下文
         UIGraphicsBeginImageContext(size)
-        
         let img = UIImage(named: "美女.jpeg")
         img?.draw(in: CGRect(x: 0, y: 0, width: 300, height: 200))
         
@@ -52,7 +51,6 @@ class ViewController: UIViewController {
         (str as NSString).draw(in: CGRect(x: 200, y: 158, width: 100, height: 30), withAttributes: [NSAttributedString.Key.font :UIFont.boldSystemFont(ofSize: 18),NSAttributedString.Key.foregroundColor :UIColor.red])
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        
         //关闭上下文
         UIGraphicsEndImageContext()
         
