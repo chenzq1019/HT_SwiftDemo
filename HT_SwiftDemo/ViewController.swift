@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let str = "Hello welcome to swfit world!"
+        print(str)
     }
 
 

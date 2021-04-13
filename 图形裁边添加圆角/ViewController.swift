@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.addSubview(maksView)
+        let str = "Hello , welcome to swift world";
+        print(str)
     }
 
 

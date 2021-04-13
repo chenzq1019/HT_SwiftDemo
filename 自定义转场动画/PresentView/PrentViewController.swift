@@ -8,7 +8,7 @@
 import UIKit
 
 class PrentViewController: UIViewController {
-    var animation : HT_PresentAnimation = {
+    lazy var animation : HT_PresentAnimation = {
         let animation  = HT_PresentAnimation(type: .Aniamtion3DTransform, size: CGSize(width: UIScreen.main.bounds.width, height: 500))
         return animation
     }()

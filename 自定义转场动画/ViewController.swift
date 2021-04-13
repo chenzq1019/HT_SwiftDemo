@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     var currentIndexPath : IndexPath?
     
-    var dataArray : [String] = ["Present / Dismiss转场- 3D","Present / Dismiss转场- Sheet","Present / Dismiss转场- Alert","Push / Pop 转场"]
+    var dataArray : [String] = ["Present / Dismiss转场- 3D","Present / Dismiss转场- Sheet","Present / Dismiss转场- Alert","Push / Pop 转场","push Normal"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +69,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             self.navigationController?.delegate = vc
             self.navigationController?.pushViewController(vc, animated: true)
         }
-
+        if indexPath.row == 4 {
+            let vc = GallerisViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 

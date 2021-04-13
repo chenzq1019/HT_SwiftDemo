@@ -8,16 +8,16 @@
 import UIKit
 
 class PushViewController: UIViewController {
-    var animation : HT_PushAnimation = {
+    lazy var animation : HT_PushAnimation = {
         return HT_PushAnimation()
     }()
     
-    var interactive: HT_PushTransitionInteractive = {
+    lazy var interactive: HT_PushTransitionInteractive = {
         let active = HT_PushTransitionInteractive()
         return active
     }()
     
-    var imageView : UIImageView = {
+    lazy var imageView : UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width))
         imageView.image = UIImage(named: "piao.png")
         return imageView
@@ -56,7 +56,7 @@ extension PushViewController: UINavigationControllerDelegate {
     }
     
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        if animation.anitmaitonType == .popType {
+        if animation.anitmaitonType == .popType && self.interactive.isInteractive {
             return self.interactive
         }
         return nil
