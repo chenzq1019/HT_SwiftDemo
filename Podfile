@@ -8,3 +8,20 @@ target 'HT_SwiftDemo' do
   # Pods for HT_SwiftDemo
   pod "SnapKit"
 end
+
+target '自定义转场动画' do
+  use_frameworks!
+  pod "SnapKit"
+end
+
+target 'StackViewDemo' do
+  
+  use_frameworks!
+  pod "SnapKit"
+end
+
+target '卡片动画' do
+  
+  use_frameworks!
+  pod "SnapKit"
+end
