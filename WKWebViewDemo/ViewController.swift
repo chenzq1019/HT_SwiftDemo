@@ -4,6 +4,11 @@
 //
 //  Created by 陈竹青 on 2021/4/22.
 //
+/**
+ * 这个是在wkwebView中，使用原生控件替换webView中的部分元素，用来优化webView页面的加载速度。
+ * 
+ */
+
 
 import UIKit
 import WebKit
@@ -60,9 +65,6 @@ extension ViewController: WKNavigationDelegate{
                     view.backgroundColor = .red
                     self.mWebView.scrollView.addSubview(view)
                 }
-                
-                
-                
             }
         }
 

@@ -12,21 +12,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let cgView = TestDraw1(frame:CGRect(x: 0, y: 88, width: UIScreen.main.bounds.width, height: 100) )
-          cgView.backgroundColor = UIColor.white
-        self.view.addSubview(cgView)
+//        let cgView = TestDraw1(frame:CGRect(x: 0, y: 88, width: UIScreen.main.bounds.width, height: 100) )
+//          cgView.backgroundColor = UIColor.white
+//        self.view.addSubview(cgView)
+//
+//        let cg2View = TestDraw2(frame: CGRect(x: 0, y: cgView.frame.maxY + 10, width: UIScreen.main.bounds.width, height: 100))
+//        cg2View.backgroundColor = UIColor.white
+//        view.addSubview(cg2View)
+//
+//        let cg3View = TestDraw3(frame: CGRect(x: 0, y: cg2View.frame.maxY+10, width: UIScreen.main.bounds.width, height: 320))
+//        view.addSubview(cg3View)
+//
+//
+//        let imageView = UIImageView(frame: CGRect(x: 10, y: cg3View.frame.maxY + 10, width: 300, height: 200))
+//        imageView.image = drawImageAtImageContext()
+//        view.addSubview(imageView)
         
-        let cg2View = TestDraw2(frame: CGRect(x: 0, y: cgView.frame.maxY + 10, width: UIScreen.main.bounds.width, height: 100))
-        cg2View.backgroundColor = UIColor.white
-        view.addSubview(cg2View)
-        
-        let cg3View = TestDraw3(frame: CGRect(x: 0, y: cg2View.frame.maxY+10, width: UIScreen.main.bounds.width, height: 320))
-        view.addSubview(cg3View)
-        
-        
-        let imageView = UIImageView(frame: CGRect(x: 10, y: cg3View.frame.maxY + 10, width: 300, height: 200))
-        imageView.image = drawImageAtImageContext()
-        view.addSubview(imageView)
+        let lineView = ChartLineView.init(frame: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: 200))
+        lineView.backgroundColor = .clear
+        self.view.addSubview(lineView)
+        lineView.leftDataArray = ["0.2","0.4","0.5","0.2","0.7","0.5"]
+       
     }
     
     
@@ -60,4 +66,5 @@ class ViewController: UIViewController {
 
 
 }
+
 

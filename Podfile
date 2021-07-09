@@ -25,3 +25,10 @@ target '卡片动画' do
   use_frameworks!
   pod "SnapKit"
 end
+
+target '电影院选座Demo' do
+  use_frameworks!
+  pod "SnapKit"
+  pod "HandyJSON"
+  
+end
