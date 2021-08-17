@@ -1,6 +1,6 @@
 //
 //  HTBaseCollectionCell.swift
-//  卡片动画
+//  卡片动画/Users/chenzhuqing/Desktop/GitProject/HT_SwiftDemo1/图形裁边添加圆角
 //
 //  Created by 陈竹青 on 2021/4/1.
 //
