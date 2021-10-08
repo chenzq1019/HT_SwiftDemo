@@ -37,3 +37,9 @@ target 'CollectionViewDemo' do
   use_frameworks!
   pod "SnapKit"
 end
+
+target 'MoyaDemo' do
+  use_frameworks!
+  pod 'Moya'
+  
+end
