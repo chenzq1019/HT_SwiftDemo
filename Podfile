@@ -43,3 +43,9 @@ target 'MoyaDemo' do
   pod 'Moya'
   
 end
+
+target 'HT_BaseObject' do
+  use_frameworks!
+  pod "SnapKit"
+  
+end

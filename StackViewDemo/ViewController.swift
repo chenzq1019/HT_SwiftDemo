@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController {
-    let dataArray : [String] = ["Demo01","Demo02","Demo03"]
+    let dataArray : [String] = ["Demo01","Demo02","Demo03","Demo04"]
     lazy var myTableView : UITableView = { [unowned self] in
         let view =  UITableView(frame: CGRect.zero,style: .plain)
         view.dataSource = self
