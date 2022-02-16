@@ -41,7 +41,7 @@ extension HTCollectionViewAction: UICollectionViewDelegate,UICollectionViewDataS
             collectionView.register(cellModel.cellClass, forCellWithReuseIdentifier: cellName)
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellName, for: indexPath)
-        if let myCell : HTCellViewProtocol = cell as? HTCellViewProtocol {
+        if let myCell = cell as? HTCellViewProtocol {
             myCell.setModel(model: cellModel)
         }
         return cell
@@ -67,15 +67,13 @@ extension HTCollectionViewAction: UICollectionViewDelegate,UICollectionViewDataS
             collectionView.register(headFootData.viewClass, forSupplementaryViewOfKind: kind, withReuseIdentifier: name)
         }
         let headFootView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: name, for: indexPath)
-        if let view : HTHeaderFooterViewProtocol = headFootView as? HTHeaderFooterViewProtocol {
+        if let view = headFootView as? HTHeaderFooterViewProtocol {
             view.setModel(model: headFoot)
         }
         return headFootView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let sectionMode : SectionBaseModel  = self.dataArray![indexPath.section]
-//        let cellModel : HTCellBaseModelProtocl = sectionMode.cellArray![indexPath.row]
         let cell = self.collectionView(collectionView, cellForItemAt: indexPath)
         if let temp = cell as? HTCellViewProtocol {
             temp.didSelectedAt(indexPath: indexPath)
@@ -98,7 +96,7 @@ extension HTCollectionViewAction: UICollectionViewDelegateFlowLayout {
             return itemModel.itemSize
         }
         let itemCell =  (itemModel.cellClass as! UICollectionViewCell.Type).init()
-        if let tempCell : HTCellViewProtocol = itemCell as? HTCellViewProtocol {
+        if let tempCell = itemCell as? HTCellViewProtocol {
             return tempCell.sizeForcell(model: itemModel, reuserIdentifer: itemModel.cellName, indexPath: indexPath)
         }
         return CGSize.zero
@@ -155,7 +153,7 @@ extension HTCollectionViewAction: UICollectionViewDelegateFlowLayout {
           return size
       }
       let view = (data.viewClass as! UICollectionReusableView.Type).init()
-      if let headFootView: HTHeaderFooterViewProtocol = view as? HTHeaderFooterViewProtocol {
+      if let headFootView = view as? HTHeaderFooterViewProtocol {
           return headFootView.sizeForheaderFooterView(modle: data, reuserIdentifer: data.viewName, section: section)
       }
       return CGSize.zero

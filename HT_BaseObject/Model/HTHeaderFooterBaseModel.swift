@@ -12,6 +12,7 @@ protocol HTHeaderFooterModelProtocol {
     var viewName : String {get}
     var viewClass: AnyClass? {get}
     var itemSize: CGSize? {get}
+    var data: Any? {get}
 //    func defaultSize() -> CGSize
 //    func defaultHeight() -> CGFloat
 }

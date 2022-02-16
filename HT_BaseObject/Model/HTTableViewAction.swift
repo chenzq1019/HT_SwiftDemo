@@ -34,7 +34,7 @@ extension HTTableViewAction: UITableViewDelegate,UITableViewDataSource {
         if cell == nil {
             cell = (cellModel.cellClass as! UITableViewCell.Type).init(style: .default, reuseIdentifier: cellName)
         }
-        if let myCell : HTCellViewProtocol = cell as? HTCellViewProtocol {
+        if let myCell  = cell as? HTCellViewProtocol {
             myCell.setModel(model: cellModel)
         }
         return cell!
@@ -45,7 +45,7 @@ extension HTTableViewAction: UITableViewDelegate,UITableViewDataSource {
         let cellModel : HTCellBaseModelProtocl = sectionMode.cellArray![indexPath.row]
         let cellName =  cellModel.cellName
         let cell = (cellModel.cellClass as! UITableViewCell.Type).init(style: .default, reuseIdentifier: cellName)
-        if let tempCell : HTCellViewProtocol = cell as? HTCellViewProtocol {
+        if let tempCell = cell as? HTCellViewProtocol {
             let height : CGFloat = tempCell.heightForCell(model: cellModel, reuserIdentifer: cellName, indexPatch: indexPath)
             return height == 0 ? UITableView.automaticDimension : height
         }
@@ -54,7 +54,7 @@ extension HTTableViewAction: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = self.tableView(tableView, cellForRowAt: indexPath)
-        if let myCell: HTCellViewProtocol = cell as? HTCellViewProtocol {
+        if let myCell = cell as? HTCellViewProtocol {
             myCell.didSelectedAt(indexPath: indexPath)
         }
     }
@@ -96,7 +96,7 @@ extension HTTableViewAction: UITableViewDelegate,UITableViewDataSource {
         if headView == nil {
             headView = (data!.viewClass as! UITableViewHeaderFooterView.Type).init(reuseIdentifier: data!.viewName)
         }
-        if let header: HTHeaderFooterViewProtocol = headView as? HTHeaderFooterViewProtocol {
+        if let header = headView as? HTHeaderFooterViewProtocol {
             header.setModel(model: data!)
         }
         return headView
@@ -107,7 +107,7 @@ extension HTTableViewAction: UITableViewDelegate,UITableViewDataSource {
         if headView == nil {
             headView = (data.viewClass as! UITableViewHeaderFooterView.Type).init(reuseIdentifier: data.viewName)
         }
-        if let header : HTHeaderFooterViewProtocol = headView as? HTHeaderFooterViewProtocol {
+        if let header = headView as? HTHeaderFooterViewProtocol {
             return header.heightForHeaderFooterView(model: data, reuserIndeitfer: data.viewName, section: section)
         }
         return 0.0001

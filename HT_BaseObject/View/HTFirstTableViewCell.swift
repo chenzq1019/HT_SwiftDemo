@@ -43,7 +43,8 @@ class HTFirstTableViewCell: UITableViewCell,HTCellViewProtocol{
     
     func setModel(model: HTCellBaseModelProtocl) {
         self.model = model as? HTCellBaseModel
-        self.textLabel?.text = self.model?.data as? String
+        let str: String  = self.model?.data as! String
+        self.textLabel?.text = str + "hhhhhhh"
     }
     
     
