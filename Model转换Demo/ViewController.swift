@@ -24,7 +24,8 @@ class ViewController: UIViewController {
             print(proName)
         }
         let dic = ["name":"weiwei","age":"18","education":"Master"]
-        person.setValuesForKeys(dic)
+//        person.setValuesForKeys(dic)
+        let p1 = Person(dic: dic)
         print(person)
         
         do {
@@ -37,6 +38,17 @@ class ViewController: UIViewController {
         }catch{
             print("保存归档失败")
         }
+        
+        let teachInfo = ["name":"chenzq", "age": "23","educate":"heigh School"] as [String : Any]
+        
+        let teach = Teacher.deserialize(from: teachInfo)
+        
+        print(teach)
+        
+        let str = "WEBVIEW&key|www.baidu.com"
+        let arraySub = str.split(separator: "&") as? [String]
+        let arraySub2: Array = str.components(separatedBy: "&")
+        print(arraySub)
         
     }
     

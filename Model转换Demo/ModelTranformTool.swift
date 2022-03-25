@@ -35,6 +35,11 @@ import Foundation
         super.init()
     }
     
+    convenience init(dic:[String:Any]){
+        self.init()
+        setValuesForKeys(dic)
+    }
+    
     
 }
 

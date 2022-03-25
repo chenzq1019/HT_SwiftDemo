@@ -49,3 +49,8 @@ target 'HT_BaseObject' do
   pod "SnapKit"
   
 end
+
+target 'Model转换Demo' do
+  use_frameworks!
+  pod "HandyJSON"
+end
