@@ -54,3 +54,9 @@ target 'Model转换Demo' do
   use_frameworks!
   pod "HandyJSON"
 end
+
+
+target 'UICollection布局切换' do
+  use_frameworks!
+  pod "SnapKit"
+end

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bbM-AY-1Cm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kDk-J9-OnP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="51.5625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5ga-vM-f10">
+            <objects>
+                <viewController id="y5q-qV-DLa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xjt-fL-7vD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWH-QB-8Sn">
+                                <rect key="frame" x="10" y="54" width="394" height="128"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="VAQ-PD-EIE"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHr-Rd-VKq">
+                                <rect key="frame" x="10" y="192" width="394" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="018-Gc-vHY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eX4-f0-y8t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MHr-Rd-VKq" firstAttribute="leading" secondItem="eX4-f0-y8t" secondAttribute="leading" constant="10" id="8aR-wc-yn8"/>
+                            <constraint firstItem="iWH-QB-8Sn" firstAttribute="top" secondItem="eX4-f0-y8t" secondAttribute="top" constant="10" id="USm-3W-bj0"/>
+                            <constraint firstItem="MHr-Rd-VKq" firstAttribute="leading" secondItem="iWH-QB-8Sn" secondAttribute="leading" constant="10" id="W6h-sC-YuB"/>
+                            <constraint firstItem="MHr-Rd-VKq" firstAttribute="top" secondItem="iWH-QB-8Sn" secondAttribute="bottom" constant="10" id="XJ5-Ak-dzi"/>
+                            <constraint firstItem="iWH-QB-8Sn" firstAttribute="leading" secondItem="eX4-f0-y8t" secondAttribute="leading" constant="10" id="ads-cy-vud"/>
+                            <constraint firstItem="eX4-f0-y8t" firstAttribute="trailing" secondItem="MHr-Rd-VKq" secondAttribute="trailing" constant="10" id="e8b-tO-KwQ"/>
+                            <constraint firstItem="eX4-f0-y8t" firstAttribute="trailing" secondItem="iWH-QB-8Sn" secondAttribute="trailing" constant="10" id="l1F-Fm-IJP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="953-7A-DL1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.4637681159422" y="-52.901785714285715"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zxU-Sf-5w6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bbM-AY-1Cm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kom-60-Tpt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="omp-F0-TVn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDb-O7-EKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.608695652173921" y="51.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

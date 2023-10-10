@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController{
-    let dataSource = ["数组布局", "数组布局2", "等间距布局", "等大小布局", "九宫格", "九宫格2"]
+    let dataSource = ["数组布局", "数组布局2", "等间距布局", "等大小布局", "九宫格", "九宫格2","系统自带布局"]
     lazy var mTableView: UITableView = { [unowned self] in
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.delegate = self;
@@ -93,6 +93,8 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
             vc = SnapSudokuViewController()
         case 5:
             vc = SnapSudoku2ViewController()
+        case 6:
+            vc = SystemLayoutViewController()
         default: break
         }
         vc.title = dataSource[indexPath.row]
